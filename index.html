@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Shaffner</title>
+<meta name="description" content="Justin Shaffner — anthropologist, writer, editor. Ph.D. (ABD), Social Anthropology, University of Cambridge. Work across Melanesia, Islam, civilization, Sky–Earth Systems Science.">
+<meta name="author" content="Justin Shaffner">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Justin Shaffner">
+<meta property="og:description" content="Anthropologist, writer, editor. Work across Melanesia, Islam, civilization, Sky–Earth Systems Science.">
+<meta property="og:image" content="portrait.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Justin Shaffner">
+<meta name="twitter:description" content="Anthropologist, writer, editor. Work across Melanesia, Islam, civilization, Sky–Earth Systems Science.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Noto+Naskh+Arabic&display=swap">
+
+<style>
+  :root {
+    --bg: #F7F2E7;
+    --bg-soft: #F0EAD9;
+    --text: #2C2620;
+    --text-muted: #6E6357;
+    --text-light: #8A7E6B;
+    --accent: #7C3A1F;
+    --accent-hover: #5E2A14;
+    --hairline: #D8CFC0;
+    --hairline-soft: #E5DDCB;
+
+    --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --font-arabic: 'Noto Naskh Arabic', 'Geeza Pro', 'Traditional Arabic', serif;
+
+    --measure: 680px;
+    --measure-wide: 920px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-serif);
+    font-variation-settings: 'opsz' 16, 'SOFT' 30;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  .wrap {
+    max-width: var(--measure-wide);
+    margin: 0 auto;
+    padding: 64px 32px 96px;
+  }
+
+  /* ---- HEADER ---- */
+
+  header {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    margin-bottom: 56px;
+    animation: fadeUp 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .identity {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  h1 {
+    font-family: var(--font-serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 50;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+    margin: 0 0 18px;
+    color: var(--text);
+  }
+
+  .role {
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 14, 'SOFT' 30;
+    color: var(--text);
+    margin: 0 0 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .role .sep {
+    color: var(--text-light);
+    margin: 0 0.35em;
+  }
+
+  .degree {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    font-variation-settings: 'opsz' 14, 'SOFT' 30;
+  }
+
+  .portrait {
+    flex: 0 0 auto;
+    width: 240px;
+    height: 320px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    border: 1px solid var(--hairline);
+  }
+
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+  }
+
+  /* ---- TAGLINE / META STRIP ---- */
+
+  .tagline-block {
+    max-width: var(--measure);
+    margin-bottom: 14px;
+    animation: fadeUp 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+  }
+
+  blockquote.tagline {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 36, 'SOFT' 40;
+    color: var(--text);
+    margin: 0 0 22px;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--accent);
+  }
+
+  .map-line {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0 0 22px;
+  }
+
+  .meta-strip {
+    max-width: var(--measure);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0 0 48px;
+    line-height: 1.7;
+    animation: fadeUp 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s both;
+  }
+
+  .meta-strip strong {
+    color: var(--text);
+    font-weight: 600;
+    font-variation-settings: 'opsz' 14, 'SOFT' 30;
+  }
+
+  .meta-strip .meta-sep {
+    color: var(--hairline);
+    margin: 0 0.6em;
+  }
+
+  /* ---- SECTIONS ---- */
+
+  main {
+    max-width: var(--measure);
+  }
+
+  section {
+    margin: 0 0 56px;
+    animation: fadeUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(0.35s + var(--i, 0) * 0.06s);
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-variation-settings: 'opsz' 48, 'SOFT' 40;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    margin: 0 0 22px;
+    color: var(--text);
+    scroll-margin-top: 24px;
+  }
+
+  h2 .anchor-link {
+    color: var(--hairline);
+    text-decoration: none;
+    margin-left: 0.4em;
+    opacity: 0;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    font-weight: 400;
+  }
+
+  h2:hover .anchor-link {
+    opacity: 1;
+  }
+
+  h2 .anchor-link:hover {
+    color: var(--accent);
+  }
+
+  h3 {
+    font-family: var(--font-serif);
+    font-variation-settings: 'opsz' 24, 'SOFT' 40;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 32px 0 16px;
+    color: var(--text);
+    letter-spacing: 0.005em;
+  }
+
+  p {
+    margin: 0 0 18px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  em, i {
+    font-style: italic;
+    font-variation-settings: 'opsz' 16, 'SOFT' 30;
+  }
+
+  strong {
+    font-weight: 600;
+    font-variation-settings: 'opsz' 14, 'SOFT' 30;
+  }
+
+  /* Arabic glyph (e.g. ﷺ) */
+  .ar {
+    font-family: var(--font-arabic);
+    font-size: 0.95em;
+    padding: 0 0.05em;
+  }
+
+  /* ---- LINKS ---- */
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(124, 58, 31, 0.3);
+    transition: color 0.15s ease, border-color 0.15s ease;
+    padding-bottom: 1px;
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+    border-bottom-color: var(--accent-hover);
+  }
+
+  /* ---- SPECIALIZATIONS ---- */
+
+  .spec p {
+    margin-bottom: 14px;
+  }
+
+  .spec strong {
+    color: var(--text);
+  }
+
+  /* ---- PUBLICATIONS ---- */
+
+  .pubs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+
+  .pubs li {
+    margin: 0 0 18px;
+    padding-left: 0;
+    line-height: 1.55;
+    font-size: 0.97rem;
+  }
+
+  .pubs li strong {
+    color: var(--text);
+    font-weight: 600;
+    margin-right: 0.2em;
+  }
+
+  /* ---- FOOTER ---- */
+
+  footer {
+    max-width: var(--measure);
+    margin-top: 96px;
+    padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+
+  footer a {
+    color: var(--text-muted);
+    border-bottom-color: var(--hairline);
+  }
+
+  footer a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ---- ANIMATIONS ---- */
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  /* ---- MOBILE ---- */
+
+  @media (max-width: 720px) {
+    .wrap {
+      padding: 40px 22px 64px;
+    }
+
+    header {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .portrait {
+      width: 180px;
+      height: 240px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    blockquote.tagline {
+      font-size: 1.15rem;
+      padding-left: 18px;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+    }
+
+    section {
+      margin-bottom: 44px;
+    }
+
+    body {
+      font-size: 17px;
+    }
+  }
+
+  /* ---- PRINT ---- */
+
+  @media print {
+    body {
+      background: white;
+      color: black;
+      font-size: 11pt;
+    }
+    .portrait { display: none; }
+    a { color: black; border-bottom: none; }
+    section { animation: none; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="identity">
+      <h1>Justin Shaffner</h1>
+      <p class="role">Anthropologist<span class="sep">·</span>Writer<span class="sep">·</span>Editor</p>
+      <p class="degree">Ph.D. (ABD), Social Anthropology, University of Cambridge</p>
+    </div>
+    <div class="portrait">
+      <img src="portrait.jpg" alt="Portrait of Justin Shaffner">
+    </div>
+  </header>
+
+  <div class="tagline-block">
+    <blockquote class="tagline">
+      Thinking from within and across Melanesia, Islam, civilization, Sky&ndash;Earth Systems Science, and other articulations of the Real.
+    </blockquote>
+    <p class="map-line">This site is a map of the work.</p>
+  </div>
+
+  <div class="meta-strip">
+    <strong>Live writing:</strong> <a href="https://substack.com/@justinshaffner">X: Recitations</a><span class="meta-sep">·</span>
+    <strong>Papers:</strong> <a href="https://thenewcentre.academia.edu/JustinShaffner">Academia.edu</a><span class="meta-sep">·</span>
+    <strong>Contact:</strong> <a href="mailto:jrshaffner@gmail.com">jrshaffner@gmail.com</a>
+  </div>
+
+  <main>
+
+    <section id="orientation" style="--i:0">
+      <h2>Orientation <a href="#orientation" class="anchor-link" aria-label="Link to Orientation">§</a></h2>
+      <p>My work follows one question across several fields: how worlds describe, transmit, and transform the Real, the Common = X around which signs, practices, and forms of life gather.</p>
+      <p>I was first trained in anthropology at the University of Virginia, where Roy Wagner became my teacher and mentor, and later at Cambridge, where my doctoral work was supervised by Marilyn Strathern. That formation placed me inside a tradition of reverse, analogic, and cross anthropology concerned with how every description invents its own ground: what it treats as given, what it treats as made, and what effects that distinction releases.</p>
+      <p>I have followed this question through the south coast of New Guinea, capacity building and ethnographic comparison, Sky&ndash;Earth Systems Science, Islamic anthropology and the Muhammadan Event, Pekiti-Tirsia Kali, public research on slavery and labor, and scholarly publishing infrastructure. Each is a different door into the same inquiry, a different site where description becomes world-making.</p>
+    </section>
+
+    <section id="the-nggiwe-event" style="--i:1">
+      <h2>The Nggiwe Event <a href="#the-nggiwe-event" class="anchor-link" aria-label="Link to The Nggiwe Event">§</a></h2>
+      <p>My doctoral work at Cambridge, supervised by Marilyn Strathern, is based on eighteen months of fieldwork (2006&ndash;2008) with the Boazi and Zimakani, Marind/Anim peoples of the Middle Fly and Lake Murray region of Papua New Guinea. The dissertation, <em>The Nggiwe Event: Analogic Description on the South Coast of New Guinea</em>, examines the south coast of New Guinea as both a regional system and a field of description: how Boazi and neighboring peoples describe themselves, how anthropology has described them, and how state, NGO, corporate, missionary, and extractive frames each transform what they claim to describe.</p>
+      <p>At the center is Nggiwe &mdash; the Boazi culture hero, lawgiver, and ordering figure. Rather than treating Nggiwe as a mythic object to be explained from outside, the dissertation asks what anthropology becomes when Nggiwe is treated as an <em>operator</em> through which a world describes, orders, and transforms itself. That move opens directly onto my later work in Islamic anthropology and <em>The Muhammadan Event</em>: what becomes visible when figures such as Nggiwe can be approached analogically as prophetic, legal, and world-ordering forms rather than reduced to myth, culture, or belief.</p>
+    </section>
+
+    <section id="hope-and-insufficiency" style="--i:2">
+      <h2>Hope and Insufficiency <a href="#hope-and-insufficiency" class="anchor-link" aria-label="Link to Hope and Insufficiency">§</a></h2>
+      <p>My work on capacity building began in the field. On the south coast of New Guinea, in the Trans-Fly region, I was observing not only the effects of NGOs, corporations, churches, and the state, but also Indigenous efforts to rebuild ritual practice, revive <em>kastom</em>, form alliances, and become legible to institutions without being exhausted by them.</p>
+      <p>That problem became <em>Hope and Insufficiency: Capacity Building in Ethnographic Comparison</em> (Berghahn, 2021), co-edited with Rachel Douglas-Jones. The project asks what capacities ethnography builds, what comparison requires, and how insufficiency can become a condition for thought rather than a failure to overcome.</p>
+    </section>
+
+    <section id="sky-earth-systems-science" style="--i:3">
+      <h2>Sky&ndash;Earth Systems Science <a href="#sky-earth-systems-science" class="anchor-link" aria-label="Link to Sky-Earth Systems Science">§</a></h2>
+      <p>Sky&ndash;Earth Systems Science (SESS), developed with Adam Louis-Klein, is an attempt to formalize a generic anthropology beyond the Nature/Culture schema of the Moderns. Rather than treating modern secular description as the neutral, supersessionary ground on which other cosmologies appear, SESS asks what becomes visible when Amazonian, Melanesian, Abrahamic, and other ancient cosmologies are allowed to provide the analogic basis of description.</p>
+      <p>Its first major statement is <em>The Sky&ndash;Earth System: A Manifesto for Learning to See and Think as a Generic Ancient</em>, written with Adam. SESS is not a nostalgic return to ancient cosmology, but a superposition of ancient and contemporary cosmologies (cf. Penrose), articulating a frame in which anthropology can think beyond the modern settlement without losing formal rigor.</p>
+    </section>
+
+    <section id="islamic-anthropology-and-the-muhammadan-event" style="--i:4">
+      <h2>Islamic Anthropology and The Muhammadan Event <a href="#islamic-anthropology-and-the-muhammadan-event" class="anchor-link" aria-label="Link to Islamic Anthropology and The Muhammadan Event">§</a></h2>
+      <p>My Islamic work belongs to the same comparative project as the Melanesian: the recovery of traditions as real sciences of the Human, not as materials to be received through secular theory from outside. Here Islam is not an object of comparison only; it is also a source of description.</p>
+      <p>Islamic anthropology begins from <em>āyāt</em>: signs on the horizon and in oneself, creation as Common = X (Qurʾān 41:53). Read with Wagner's &ldquo;human hologram,&rdquo; the completed human (<em>al-insān al-kāmil</em>) becomes an analogic basis for describing <em>tawḥīd</em>: the Real gathered through personhood, practice, civilization, and Prophetic form.</p>
+      <p><em>The Muhammadan Event</em>, a central book project, reads the Prophet Muhammad <span class="ar">ﷺ</span> as the event in which the message of <em>tawḥīd</em> appears as a recursive, superpositional science: the same message given to all prophets, gathered and displayed in one life, one form, and one community. The book works across both classical Islamic and Western philosophical traditions, and its underlying logic also shapes my reading of Nggiwe as analogic prophet, messenger, or lawgiver.</p>
+      <p>A related project on <em>Ṭarīqa Muḥammadiyya</em> redescribes what has often been called &ldquo;neo-Sufism&rdquo; as the reassertion of the Muhammadan path: the joining of inner realization and outer Prophetic form across its later revivals.</p>
+    </section>
+
+    <section id="pekiti-tirsia-kali" style="--i:5">
+      <h2>Pekiti-Tirsia Kali: Ancient, Medieval, and Ultra-Modern Combat Science <a href="#pekiti-tirsia-kali" class="anchor-link" aria-label="Link to Pekiti-Tirsia Kali">§</a></h2>
+      <p>Pekiti-Tirsia Kali (PTK) is a complete combat science partitioned into many (sub)systems without ceasing to be one body of knowledge, or one system. Ancient in lineage, medieval in codification, and ultra-modern in application, PTK is a blade-oriented science of close-quarters combat. I have studied PTK under Grand Tuhon Leo T. Gaje Jr. and hold the rank of Tuhon.</p>
+      <p>A paper in preparation, <em>Combat Engineering: Pekiti-Tirsia Kali as Generic Combat Science</em>, reads PTK as a generic science of how two or more bodies, as moving wave forms, cross one another across distance, range, angle, and category of weapon. That science is gathered in the palm of one's hand through the five PTK attributes: speed, timing, power, precision, and accuracy. It reads PTK comparatively with classical combat and performance traditions such as the Spanish Destreza and the <em>Nāṭya Śāstra</em>. I direct PTK Bayanihan.</p>
+    </section>
+
+    <section id="center-for-social-solutions" style="--i:6">
+      <h2>Center for Social Solutions <a href="#center-for-social-solutions" class="anchor-link" aria-label="Link to Center for Social Solutions">§</a></h2>
+      <p>From 2018 to 2022 I was Research Associate at the Center for Social Solutions, University of Michigan, under founding director Earl Lewis, working on <em>Slavery and Its Aftermath</em> and <em>The Dignity of Labor in an Automated World</em>. This work brought my concern with conceptual architecture into public institutional research: how categories such as slavery, labor, automation, dignity, and knowledge work shape the lives and policies they claim merely to describe.</p>
+      <p>I contributed to work on &ldquo;the third slavery&rdquo; &mdash; contemporary trafficking, forced labor, and debt bondage as a continuing era of involuntary servitude &mdash; and co-authored &ldquo;Back to the Future: Fragile Workers, Higher Education, and the Future Knowledge Economy&rdquo; (2021).</p>
+    </section>
+
+    <section id="editorial-infrastructure" style="--i:7">
+      <h2>Editorial Infrastructure <a href="#editorial-infrastructure" class="anchor-link" aria-label="Link to Editorial Infrastructure">§</a></h2>
+      <p>For more than twenty-five years I have built and edited scholarly publishing infrastructure as part of the same intellectual work, much of it in open access. The trajectory began with <em>Prickly Pear Pamphlets</em>, the small Cambridge press Keith Hart and Anna Grimshaw co-founded in 1993. The series later passed to Matthew Engelke; from 1999 to 2002 I served as assistant editor while Engelke was on fieldwork. That lineage eventually became <em>Prickly Paradigm Press</em> under Marshall Sahlins and Engelke; in 2004 I scanned the original pamphlets into PDF and put them online.</p>
+      <p>Much of the work that followed grew out of long collaboration with the late Keith Hart: <em>The Memory Bank</em>, the Open Anthropology Cooperative and OAC Press, and <em>Cosmopolitics</em>, co-edited with Huon Wardle. With Giovanni da Col I co-founded <em>HAU: Journal of Ethnographic Theory</em> in 2011 at Cambridge. I was founding editor of the <em>Anthropology Book Forum</em> at the American Anthropological Association (2014&ndash;2016); Associate Editor of <em>Anthropology and Humanism</em> (2009&ndash;2015); and since 2021 Co-Director of <em>Oscillations</em>. I treat editorial work as a form of intellectual contribution in its own right &mdash; distinct from authorship, inseparable from it.</p>
+    </section>
+
+    <section id="specializations" class="spec" style="--i:8">
+      <h2>Specializations <a href="#specializations" class="anchor-link" aria-label="Link to Specializations">§</a></h2>
+      <p><strong>Ethnography and region</strong> &mdash; Melanesian ethnography; Boazi, Zimakani, and Marind/Anim peoples; Papua New Guinea; Amazonian&ndash;Melanesian comparison.</p>
+      <p><strong>Theory and method</strong> &mdash; symbolic and reverse anthropology after Roy Wagner; the Cambridge tradition of partial connections and fractal personhood; the symmetric turn of Brazilian anthropology and the Abaeté Network; ethnographic theory and the ontological turn; cosmopolitics and comparative cosmology; Sky&ndash;Earth Systems Science.</p>
+      <p><strong>Islamic and civilizational thought</strong> &mdash; Islamic anthropology and Islamic science; the Muhammadan Event; <em>Ṭarīqa</em> textual scholarship; civilizational analysis; political theology.</p>
+      <p><strong>Embodied systems</strong> &mdash; Pekiti-Tirsia Kali; comparative combat traditions; Spanish Destreza; <em>Nāṭya Śāstra</em>; embodied transmission and combat geometry.</p>
+      <p><strong>Applied and institutional research</strong> &mdash; capacity building and ethnographic comparison; slavery and the future of work; the institutional architectures of fragile knowledge labor.</p>
+      <p><strong>Editorial and publishing</strong> &mdash; scholarly publishing infrastructure; open-access editorial work; journal and press founding.</p>
+    </section>
+
+    <section id="selected-publications" class="pubs" style="--i:9">
+      <h2>Selected Publications <a href="#selected-publications" class="anchor-link" aria-label="Link to Selected Publications">§</a></h2>
+
+      <h3>Books / Edited Volumes</h3>
+      <ul>
+        <li><strong>2021.</strong> Douglas-Jones, Rachel &amp; Justin Shaffner, eds. <em>Hope and Insufficiency: Capacity Building in Ethnographic Comparison.</em> New York: Berghahn Books. <a href="https://www.berghahnbooks.com/title/Douglas-JonesHope">berghahnbooks.com</a></li>
+        <li><strong>2017.</strong> Shaffner, Justin &amp; Huon Wardle, eds. <em>Cosmopolitics: Collected Papers of the Open Anthropology Cooperative, Vol. I.</em> OAC Press. <a href="http://openanthcoop.net/press/cosmopolitics-the-collected-papers/">openanthcoop.net</a></li>
+      </ul>
+
+      <h3>Articles &amp; Chapters</h3>
+      <ul>
+        <li><strong>2023.</strong> Bashkow, Ira &amp; Justin Shaffner. &ldquo;Roy Wagner (1938&ndash;2018).&rdquo; <em>American Anthropologist</em> 125(2): 463&ndash;469. <a href="https://doi.org/10.1111/aman.13847">doi.org/10.1111/aman.13847</a> · <a href="https://www.academia.edu/101205940/Obituary_Roy_Wagner_1938_2018_">open PDF</a></li>
+        <li><strong>2023.</strong> Shaffner, Justin &amp; Adam Louis-Klein. &ldquo;The Sky&ndash;Earth System: A Manifesto for Learning to See and Think as a Generic Ancient.&rdquo; <a href="https://www.academia.edu/105365384/The_Sky_Earth_System_A_Manifesto_for_Learning_to_See_and_Think_as_a_Generic_Ancient">academia.edu</a></li>
+        <li><strong>2021.</strong> Lewis, Earl; Alford Young Jr.; Justin Shaffner; Julie Arbit. &ldquo;Back to the Future: Fragile Workers, Higher Education, and the Future Knowledge Economy.&rdquo; In <em>The Great Skills Gap: Optimizing Talent for the Future of Work</em>, Jason Wingard &amp; Christine Farrugia, eds. Stanford: Stanford University Press. <a href="https://www.sup.org/books/business/great-skills-gap">sup.org</a></li>
+        <li><strong>2017.</strong> Douglas-Jones, Rachel &amp; Justin Shaffner. &ldquo;Capacity Building in Ethnographic Comparison.&rdquo; <em>The Cambridge Journal of Anthropology</em> 35(1): 1&ndash;16. <a href="https://doi.org/10.3167/cja.2017.350102">doi.org/10.3167/cja.2017.350102</a></li>
+        <li><strong>2011.</strong> Crook, Tony &amp; Justin Shaffner. &ldquo;Preface: Roy Wagner's &lsquo;Chess of Kinship&rsquo;: An Opening Gambit.&rdquo; <em>HAU: Journal of Ethnographic Theory</em> 1(1): 159&ndash;164. <a href="https://doi.org/10.14318/hau1.1.006">doi.org/10.14318/hau1.1.006</a></li>
+        <li><strong>2010.</strong> Shaffner, Justin. &ldquo;Nem plural, nem singular: ontologia, descrição e a Nova Etnografia Melanésia.&rdquo; <em>Ilha Revista de Antropologia</em> 12(1,2): 103&ndash;136. <a href="https://doi.org/10.5007/2175-8034.2010v12n1-2p103">doi.org/10.5007/2175-8034.2010v12n1-2p103</a></li>
+        <li><strong>2010.</strong> Leake, Jena &amp; Justin Shaffner. &ldquo;Edith Turner: A Lifetime of Encountering the Other.&rdquo; <em>Poiesis: A Journal of the Arts &amp; Communication</em> 12: 50&ndash;57.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Justin Shaffner. <a href="mailto:jrshaffner@gmail.com">jrshaffner@gmail.com</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
